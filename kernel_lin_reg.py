@@ -51,6 +51,7 @@ class Kernel_Linear_Regression:
                 self.bias = self.bias - sum(gradients)/self.batch_size*self.learning_rate
 
     def predict(self, x_test:np.array):
+        self.k_test = []
         Kernel_Linear_Regression.init_kernel(self, x_test, train=False)
         predictions = [sum([self.betas[i]*self.k_test[j][i] for i in range(len(self.betas))])+self.bias 
                        for j in range(len(x_test))]
