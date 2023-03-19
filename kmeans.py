@@ -30,7 +30,7 @@ class K_means:
         self.data = data
         self.z = np.zeros(shape=(len(self.data), self.num_clusters))
         self.initialize_centers()
-        for iteration in range(self.iterations):
+        for _ in range(self.iterations):
             self.clusters = []
             for i in range(len(self.data)):
                 for k in range(self.num_clusters):
