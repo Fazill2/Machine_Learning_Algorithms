@@ -29,7 +29,7 @@ class Kernel_Linear_Regression:
             else:
                 self.k_test.append(temp)
             
-    def train(self, x: np.array, y):
+    def fit(self, x: np.array, y):
         self.x = x
         Kernel_Linear_Regression.init_kernel(self, x)
         for epoch in range(self.epochs):

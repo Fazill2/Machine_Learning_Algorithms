@@ -26,7 +26,7 @@ class K_means:
         else:
             self.centers = self.data[self.generator.choice(len(self.data), size=self.num_clusters, replace=False)]
         
-    def train(self, data: np.array):
+    def fit(self, data: np.array):
         self.data = data
         self.z = np.zeros(shape=(len(self.data), self.num_clusters))
         self.initialize_centers()
